@@ -1,6 +1,11 @@
+package controller;
+
+import model.Recept;
+import repository.Recepts;
+
 public class Alchemy {
-    Recepts recepts;
-    String rec = "Рецепта нет";
+    private Recepts recepts;
+    private String rec = "Рецепта нет";
 
     public String preparation(String nameRec){
        recepts = new Recepts();
@@ -8,11 +13,11 @@ public class Alchemy {
 
         for (Recept recept : recepts.recepts){ //цикл перебирает коллекцию, по очереди присваивая каждую строчку пульту с именем recept
 
-            if (recept.name.equals(nameRec)){//имя пульта из цикла
+            if (recept.getName().equals(nameRec)){//имя пульта из цикла
                 //equals - проверяет равенство объектов
 
-                rec = recept.name + " " + recept.opis + " " + recept.ingrid1 +
-                        " " + recept.pieces1 + " "  + recept.ingrid2 + " " + recept.pieces2;
+                rec = recept.getName() + " " + recept.getOpis() + " " + recept.getIngrid1() +
+                        " " + recept.getPieces1() + " "  + recept.getIngrid2() + " " + recept.getPieces2();
                 return rec;
             }
         }

@@ -1,9 +1,13 @@
+package repository;
+
+import model.Ingridient;
+
 import java.util.ArrayList;
 
 public class Ingridients {
 
 
-    ArrayList<Ingridient> ingridients = new ArrayList<>();//коллекция №1 заполнение коллекции №1
+    public ArrayList<Ingridient> ingridients = new ArrayList<>();//коллекция №1 заполнение коллекции №1
 
 
     public Ingridients(){
